@@ -3,11 +3,6 @@ import { render } from '@testing-library/react';
 import { Ingredient, Ingredients } from './Ingredient';
 
 describe('Ingredient', () => {
-  it('should render nothing by default', () => {
-    const { container } = render(<Ingredient />);
-    expect(container.firstChild).toBeNull();
-  });
-
   it.each([
     [Ingredients.BreadTop, 'BreadTop'],
     [Ingredients.BreadBottom, 'BreadBottom'],

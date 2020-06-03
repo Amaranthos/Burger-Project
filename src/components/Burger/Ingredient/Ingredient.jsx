@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Ingredient.module.css';
 
 export const Ingredients = {
@@ -13,6 +14,10 @@ export const Ingredients = {
 export const Ingredient = ({ type }) => {
   const Component = map[type];
   return <>{Component && <Component />}</>;
+};
+
+Ingredient.propTypes = {
+  type: PropTypes.oneOf(Object.values(Ingredients)),
 };
 
 const BreadTop = () => (
