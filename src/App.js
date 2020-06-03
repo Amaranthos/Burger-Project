@@ -1,10 +1,11 @@
 import React from 'react';
 import { Layout } from './components';
+import { BurgerBuilder } from './containers';
 
 export const App = () => (
   <div>
     <Layout>
-      <p>Hello, world</p>
+      <BurgerBuilder />
     </Layout>
   </div>
 );
