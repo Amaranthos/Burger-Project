@@ -11,22 +11,8 @@ export const Ingredients = {
 };
 
 export const Ingredient = ({ type }) => {
-  switch (type) {
-    case Ingredients.BreadTop:
-      return <BreadTop />;
-    case Ingredients.BreadBottom:
-      return <BreadBottom />;
-    case Ingredients.Meat:
-      return <Meat />;
-    case Ingredients.Bacon:
-      return <Bacon />;
-    case Ingredients.Cheese:
-      return <Cheese />;
-    case Ingredients.Salad:
-      return <Salad />;
-    default:
-      return null;
-  }
+  const Component = map[type];
+  return <>{Component && <Component />}</>;
 };
 
 const BreadTop = () => (
@@ -45,3 +31,12 @@ const Bacon = () => <div className={styles.Bacon}></div>;
 const Cheese = () => <div className={styles.Cheese}></div>;
 
 const Salad = () => <div className={styles.Salad}></div>;
+
+const map = {
+  [Ingredients.BreadTop]: BreadTop,
+  [Ingredients.BreadBottom]: BreadBottom,
+  [Ingredients.Meat]: Meat,
+  [Ingredients.Bacon]: Bacon,
+  [Ingredients.Cheese]: Cheese,
+  [Ingredients.Salad]: Salad,
+};
