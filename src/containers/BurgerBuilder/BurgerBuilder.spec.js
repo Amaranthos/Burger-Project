@@ -4,9 +4,9 @@ import { BurgerBuilder } from './BurgerBuilder';
 
 describe('BurgerBuilder', () => {
   it('should render a burger', () => {
-    render(<BurgerBuilder />);
+    const { container } = render(<BurgerBuilder />);
 
-    expect(screen.getByText(/Burger/)).toBeVisible();
+    expect(container.getElementsByClassName('Burger')).toHaveLength(1);
   });
 
   it('should render the builder controls', () => {
