@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Burger } from '../../components/Burger/Burger';
 import { Ingredients } from '../../components/Burger/Ingredient';
+import { BuildControls } from '../../components/BuildControls/BuildControls';
 
 export const BurgerBuilder = () => {
   const [ingredients] = useState({
@@ -13,7 +14,7 @@ export const BurgerBuilder = () => {
   return (
     <>
       <Burger ingredients={ingredients} />
-      <div>Controls</div>
+      <BuildControls />
     </>
   );
 };

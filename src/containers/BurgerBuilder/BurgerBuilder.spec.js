@@ -12,6 +12,9 @@ describe('BurgerBuilder', () => {
   it('should render the builder controls', () => {
     render(<BurgerBuilder />);
 
-    expect(screen.getByText(/Controls/)).toBeVisible();
+    expect(screen.getByText(/Salad/)).toBeVisible();
+    expect(screen.getByText(/Cheese/)).toBeVisible();
+    expect(screen.getByText(/Meat/)).toBeVisible();
+    expect(screen.getByText(/Bacon/)).toBeVisible();
   });
 });
