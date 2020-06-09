@@ -4,10 +4,10 @@ import { Ingredients } from '../../components/Burger/Ingredient';
 
 export const BurgerBuilder = () => {
   const [ingredients] = useState({
-    [Ingredients.Salad]: 1,
-    [Ingredients.Bacon]: 1,
-    [Ingredients.Cheese]: 2,
-    [Ingredients.Meat]: 2,
+    [Ingredients.Salad]: 0,
+    [Ingredients.Bacon]: 0,
+    [Ingredients.Cheese]: 0,
+    [Ingredients.Meat]: 0,
   });
 
   return (
