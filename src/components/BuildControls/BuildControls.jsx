@@ -22,10 +22,10 @@ const controls = [
   },
 ];
 
-export const BuildControls = () => (
+export const BuildControls = ({ addIngredient }) => (
   <div className={styles.BuildControls}>
-    {controls.map(({ label }) => (
-      <Control key={label} label={label} />
+    {controls.map(({ label, type }) => (
+      <Control key={label} label={label} onMore={() => addIngredient(type)} />
     ))}
   </div>
 );
